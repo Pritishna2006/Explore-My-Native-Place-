@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Native Place - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <!-- (if using PHP, else copy navbar directly) -->
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <h2 class="logo">My Native Place</h2>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lifestyle.html">Lifestyle</a></li>
+      <li><a href="culture.html">Culture</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="infrastructure.html">Infrastructure</a></li>
+      <li><a href="heritage.html">Heritage</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<!-- Section Education -->
+<section class="culture-education" id="education">
+  <h2>Educational Status</h2>
+  <p class="education-description">
+    Education is the backbone of our village's growth. With increased awareness, local schools, and bright young minds, the future shines brighter every day.
+  </p>
+   <h2>Educational Status</h2>
+
+  <div class="stats-container">
+    <div class="counter-box">
+      <h3 class="counter" data-target="85">0</h3>
+      <p>Literacy Rate</p>
+    </div>
+
+    <div class="counter-box">
+      <h3 class="counter" data-target="3">0</h3>
+      <p>Schools and College</p>
+    </div>
+
+    <div class="counter-box">
+      <h3 class="counter" data-target="300">0</h3>
+      <p>Students</p>
+    </div>
+  </div>
+
+  <div class="education-cards">
+    <div class="education-card">
+      <h3>Primary School</h3>
+      <img src="upschool.jpeg">
+      <p>"Learning roots, growing futures!<br> Our village primary school is where young minds bloom, and dreams take root.</p>
+    </div>
+
+    <div class="education-card">
+      <h3>High Schools</h3>
+      <img src="angeswarapada.jpeg">
+      <p>"Empowering young minds, shaping futures! <br> Our village high school is where knowledge meets ambition, and dreams take flight.</p>
+    </div>
+
+    <div class="education-card">
+      <h3>Collage</h3>
+      <img src="jagannath-collage.jpeg">
+      <p>"Knowledge hub of our village!<br> Empowering students with education, skills, and dreams. Where aspirations meet opportunities! </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Modal -->
+<div id="eduModal" class="edu-modal">
+  <div class="edu-modal-content">
+    <span class="edu-close">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <img id="modalImg" src="" alt="">
+    <p id="modalInfo"></p>
+  </div>
+</div>
+<script src="script.js"></script>

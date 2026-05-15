@@ -1,0 +1,586 @@
+ 
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+#clock{
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 2rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+
+/* 🌟 Navigation Bar Styles */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #00aaff;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+
+/* Push content below fixed navbar */
+.intro {
+  padding-top: 80px; /* Prevents intro text from hiding behind navbar */
+}
+
+
+.intro {
+  position: relative;
+  height: 100vh;
+  padding-top: 80px; /* keeps space for navbar */
+  background: linear-gradient(to right, #1a1a1a, #3b003b); /* fallback */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  color: #ff4f4f;
+}
+
+.intro-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.4); /* darken video for text contrast */
+}
+
+.intro h1 {
+  position: relative; /* above the video */
+  font-size: 3rem;
+  margin-bottom: 30px;
+  z-index: 1;
+  color: #ff4f4f;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+/* Lifestyle Section */
+.lifestyle {
+  height:100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #d7d2cc, #304352);
+}
+
+.img-card {
+  margin-top: 60px;
+  background-color: #1a1a2e;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 420px;
+  height:68vh;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 87, 51, 0.6);
+}
+
+.img-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.img-card:hover img {
+  transform: scale(1.05);
+}
+
+.img-text {
+  padding: 20px;
+  text-align: center;
+}
+
+.img-text h2 {
+  color: #ffcc00;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.img-text p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+
+
+
+
+/* Culture Section */
+.culture {
+  background: linear-gradient(to right, #d7d2cc, #304352);
+  color: #222;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.culture h2 {
+  font-size: 2.8rem;
+  color: #800000;
+  margin-bottom: 20px;
+}
+
+.culture-description {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Card Grid Layout */
+.culture-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Each Card */
+.culture-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.culture-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.4);
+}
+
+.culture-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.culture-card p {
+  padding: 15px 20px;
+  font-size: 1rem;
+  color: #222;
+}
+
+.educational-description {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.culture-card strong {
+  color: #990000;
+  font-size: 1.1rem;
+}
+
+/* Education Specific Styles */
+
+
+.culture-education {
+ background: linear-gradient(to right, #d7d2cc, #304352);
+  color: #222;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.education-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+  margin-top: 40px;
+}
+
+.education-card {
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  border-radius: 15px;
+  padding: 25px 20px;
+  text-align: left;
+  transition: transform 0.4s ease, background 1.2s ease;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.education-card h3 {
+  color: #4b0082;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.education-card p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-top: 23px;
+}
+
+.education-card strong {
+  color: #b30059;
+}
+
+.education-card:hover {
+  transform: translateY(-12px);
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.4);
+}
+
+
+
+
+.education-card img{
+  width:350px;
+}
+
+.culture-education h2{
+   font-size: 2.8rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.education-description{
+    max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
+
+/* Infrastructure Section */
+.infrastructure {
+  background: linear-gradient(to right, #d7d2cc, #304352);
+  color: #fff;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.infrastructure h2 {
+  font-size: 2.8rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.infrastructure-description {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
+
+/* Card Grid Layout */
+.infrastructure-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Each Card */
+.infrastructure-card {
+  background: #2c3e50;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: left;
+}
+
+.infrastructure-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.infrastructure-card h3 {
+  color: #00ffff;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.infrastructure-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.infrastructure-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+
+/* HERITAGE SECTION STYLING */
+.heritage {
+  background: linear-gradient(to right, #d7d2cc, #304352);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heritage-description
+{
+   max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.heritage-description p {
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.heritage h2 {
+  font-size: 2.8em;
+  color: #6b4f3b;
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+  position: relative;
+}
+
+.heritage h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #d4a373;
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+.heritage-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.heritage-card {
+  max-width: 500px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.heritage-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.heritage-image {
+  width: 100%;
+  /*height: auto;*/
+  border-bottom: 4px solid #d4a373;
+  display: block;
+}
+
+
+
+@media (max-width: 768px) {
+  .heritage-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ }
+
+
+
+
+/* CONTACT SECTION */
+.contact {
+  background: linear-gradient(to right, #d7d2cc, #304352);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.8em;
+  color: #5a3e2b;
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+  position: relative;
+}
+
+.contact h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #d4a373;
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d4a373;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #d4a373;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #c28b5b;
+}
+
+.contact-info {
+  max-width: 400px;
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+  color: #4e4e4e;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h3 {
+  font-size: 1.6em;
+  color: #6b4f3b;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+  font-size: 1.05em;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
+
+
+.dark-mode {
+  background: #111;
+  color: white;
+}
+
+.dark-mode .infrastructure-card,
+.dark-mode .education-card,
+.dark-mode .culture-card {
+  background: #222;
+  color: white;
+}
