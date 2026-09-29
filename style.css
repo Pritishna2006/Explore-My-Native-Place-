@@ -119,7 +119,6 @@ html {
 
 /* Lifestyle Section */
 .lifestyle {
-  height:100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -127,7 +126,10 @@ html {
   padding: 60px 20px;
   background: linear-gradient(to right, #d7d2cc, #304352);
 }
-
+.lifestyle {
+  height: auto;
+  min-height: 100vh;
+}
 .img-card {
   margin-top: 60px;
   background-color: #1a1a2e;
@@ -583,4 +585,344 @@ html {
 .dark-mode .culture-card {
   background: #222;
   color: white;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------- GENERAL ---------- */
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ---------- NAVBAR ---------- */
+
+  .navbar-container {
+    padding: 12px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    font-size: 0.85rem;
+  }
+
+
+  /* ---------- INTRO / HOME ---------- */
+
+  .intro {
+    min-height: 100vh;
+    height: auto;
+    padding: 120px 15px 40px;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  #clock {
+    font-size: 1.3rem;
+  }
+
+
+  /* ---------- LIFESTYLE ---------- */
+
+  .lifestyle {
+    height: auto;
+    min-height: 100vh;
+    padding: 50px 15px;
+    gap: 25px;
+  }
+
+  .img-card {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .img-card img {
+    height: 200px;
+  }
+
+  .img-text {
+    padding: 15px;
+  }
+
+  .img-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .img-text p {
+    font-size: 0.95rem;
+  }
+
+
+  /* ---------- CULTURE ---------- */
+
+  .culture {
+    padding: 50px 15px;
+  }
+
+  .culture h2 {
+    font-size: 2rem;
+  }
+
+  .culture-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .culture-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .culture-card img {
+    height: 200px;
+  }
+
+  .culture-card p {
+    font-size: 0.95rem;
+  }
+
+
+  /* ---------- EDUCATION ---------- */
+
+  .culture-education {
+    padding: 50px 15px;
+  }
+
+  .culture-education h2 {
+    font-size: 2rem;
+  }
+
+  .education-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .education-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .education-card {
+    padding: 20px 15px;
+  }
+
+  .education-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .education-card p {
+    font-size: 0.95rem;
+    padding-top: 10px;
+  }
+
+  .education-card img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+
+  /* ---------- INFRASTRUCTURE ---------- */
+
+  .infrastructure {
+    padding: 50px 15px;
+  }
+
+  .infrastructure h2 {
+    font-size: 2rem;
+  }
+
+  .infrastructure-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .infrastructure-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .infrastructure-card {
+    padding: 15px;
+  }
+
+  .infrastructure-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .infrastructure-card p {
+    font-size: 0.95rem;
+  }
+
+  .infrastructure-card img {
+    height: 180px;
+  }
+
+
+  /* ---------- HERITAGE ---------- */
+
+  .heritage {
+    padding: 50px 15px;
+  }
+
+  .heritage h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .heritage-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .heritage-description p {
+    font-size: 1rem;
+  }
+
+  .heritage-container {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .heritage-card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .heritage-image {
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact {
+    padding: 50px 15px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .contact-info {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    gap: 8px 10px;
+  }
+
+  .nav-links li a {
+    font-size: 0.75rem;
+  }
+
+  .intro h1 {
+    font-size: 1.6rem;
+  }
+
+  #clock {
+    font-size: 1.1rem;
+  }
+
+  .culture h2,
+  .culture-education h2,
+  .infrastructure h2,
+  .heritage h2,
+  .contact h2 {
+    font-size: 1.7rem;
+  }
+
+  .img-card img,
+  .culture-card img {
+    height: 170px;
+  }
+
+  .infrastructure-card img {
+    height: 160px;
+  }
+
+  .img-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .img-text p,
+  .culture-card p,
+  .education-card p,
+  .infrastructure-card p {
+    font-size: 0.9rem;
+  }
+
 }
